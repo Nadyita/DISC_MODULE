@@ -121,7 +121,7 @@ class DiscController {
 				return;
 			}
 			// Only one found, so pick this one
-			$disc = $discs[1];
+			$disc = $discs[0];
 		}
 
 		// Now we have exactly one nano. Show it to the user
@@ -140,8 +140,7 @@ class DiscController {
 	public function getDiscChoiceDialogue($discs) {
 		$blob = array();
 		foreach ($discs as $disc) {
-			$discLink = $this->text->makeItem($disc->disc_id, $disc->disc_id, $disc->disc_ql, $disc->disc_name);
-			$text = $this->text->makeChatcmd($disc->disc_name, "/tell <myname> disc ${discLink}");
+			$text = $this->text->makeChatcmd($disc->disc_name, "/tell <myname> disc ".$disc->disc_name);
 			$blob []= $text;
 		}
 		$msg = $this->text->makeBlob(
