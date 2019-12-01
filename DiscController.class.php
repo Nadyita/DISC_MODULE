@@ -127,8 +127,34 @@ class DiscController {
 		// Now we have exactly one nano. Show it to the user
 		$discLink = $this->text->makeItem($disc->disc_id, $disc->disc_id, $disc->disc_ql, $disc->disc_name);
 		$nanoLink = $this->text->makeItem($disc->crystal_id, $disc->crystal_id, $disc->crystal_ql, $disc->crystal_name);
-		$msg = "${discLink} will turn into ${nanoLink}.";
+		$nanoDetails = $this->getNanoDetails($disc);
+		$msg = sprintf(
+			"%s will turn into %s (%s, %s, <highlight>%s<end>).",
+			$discLink,
+			$nanoLink,
+			$nanoDetails->profession,
+			$nanoDetails->nanoline_name,
+			$nanoDetails->location
+		);
 		$sendto->reply($msg);
+	}
+
+	/**
+	 * Get additional information about the nano of a disc
+	 *
+	 * @param \Budabot\Core\DBRow $disc The instruction disc
+	 * @return \Budabot\Core\DBRow|null The details or null if not found
+	 */
+	public function getNanoDetails($disc) {
+		$sql = "SELECT ".
+					"n.location, ".
+					"n.profession, ".
+					"nl.name AS nanoline_name ".
+				"FROM nanos n ".
+				"LEFT JOIN nanos_nanolines_ref nnr ON n.lowid = nnr.lowid ".
+				"LEFT JOIN nanolines nl ON nnr.nanolines_id = nl.id ".
+				"WHERE n.lowid = ?";
+		return $this->db->queryRow($sql, $disc->crystal_id);
 	}
 
 	/**
