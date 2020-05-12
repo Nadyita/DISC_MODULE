@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS discs;
-CREATE TABLE discs(disc_id INT PRIMARY KEY, crystal_id INT NOT NULL, crystal_ql INT NOT NULL, disc_ql INT NOT NULL, disc_name VARCHAR(200) NOT NULL, crystal_name VARCHAR(200) NOT NULL);
+CREATE TABLE discs(disc_id INT PRIMARY KEY, crystal_id INT NOT NULL, crystal_ql INT NOT NULL, disc_ql INT NOT NULL, disc_name VARCHAR(200) NOT NULL, crystal_name VARCHAR(200) NOT NULL, comment VARCHAR(200));
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(144818,125753,156,156,'Instruction Disc (Calling of Altumus)','Nano Crystal (Calling of Altumus)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(144819,125754,186,186,'Instruction Disc (Calling of Belamorte)','Nano Crystal (Calling of Belamorte)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(144954,29424,93,93,'Instruction Disc (Advanced Symbol Manipulation)','Nano Crystal (Advanced Symbol Manipulation)');
@@ -469,7 +469,7 @@ INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_n
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147078,44005,136,136,'Instruction Disc (Advanced Cellular Rebuild)','Nano Crystal (Advanced Cellular Rebuild)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147080,44179,93,93,'Instruction Disc (Advanced Nano Gorger)','Nano Crystal (Advanced Nano Gorger)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147081,44180,159,159,'Instruction Disc (All-Consuming Toxin)','Nano Crystal (All-Consuming Toxin)');
-INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147082,42424,185,185,'Instruction Disc (Alpha and Omega)','Nano Crystal (Alpha & Omega)');
+INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name, comment) VALUES(147082,42424,185,185,'Instruction Disc (Alpha and Omega)','Nano Crystal (Alpha & Omega)', 'Used for building the Omni-Med Battle Body Armor');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147083,44181,146,146,'Instruction Disc (Autonomous Viral Agent)','Nano Crystal (Autonomous Viral Agent)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147084,95750,149,149,'Instruction Disc (Basic Omni-Med Enhancement)','Nano Crystal (Basic Omni-Med Enhancement)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147085,44006,146,146,'Instruction Disc (Bestow Healing)','Nano Crystal (Bestow Healing)');
@@ -571,7 +571,7 @@ INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_n
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147185,43963,24,24,'Instruction Disc (Lesser Nano Surgery)','Nano Crystal (Lesser Nano Surgery)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147186,43964,109,109,'Instruction Disc (Lesser Policy Payout)','Nano Crystal (Lesser Policy Payout)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147187,43965,152,152,'Instruction Disc (Life Balm)','Nano Crystal (Life Balm)');
-INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147188,97456,182,182,'Instruction Disc (Life Channeler)','Nano Crystal (Life Channeler)');
+INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name, comment) VALUES(147188,97456,182,182,'Instruction Disc (Life Channeler)','Nano Crystal (Life Channeler)', 'Used for building the Omni-Med Battle Sleeves');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147189,97455,50,50,'Instruction Disc (Life Reinforcement)','Nano Crystal (Life Reinforcement)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147190,43946,165,165,'Instruction Disc (Lifegiving Elixir)','Nano Crystal (Lifegiving Elixir)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147191,44189,7,7,'Instruction Disc (Limited Nano Reaper)','Nano Crystal (Limited Nano Reaper)');
@@ -616,7 +616,7 @@ INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_n
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147233,44208,86,86,'Instruction Disc (Scythe A Virus)','Nano Crystal (Scythe A Virus)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147234,44200,182,182,'Instruction Disc (Scythe B Virus)','Nano Crystal (Scythe B Virus)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147235,44197,60,60,'Instruction Disc (Seethe with Germs)','Nano Crystal (Seethe With Germs)');
-INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147236,44209,185,185,'Instruction Disc (Sentient Nano Gorger)','Nano Crystal (Sentient Nano Gorger)');
+INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name, comment) VALUES(147236,44209,185,185,'Instruction Disc (Sentient Nano Gorger)','Nano Crystal (Sentient Nano Gorger)', 'Used for building the Omni-Med Battle Gloves');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147237,82011,37,37,'Instruction Disc (Shatter Bone)','Nano Crystal (Shatter Bone)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147238,28787,33,33,'Instruction Disc (Specialist Treatment)','Nano Crystal (Specialist Treatment)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147239,43942,27,27,'Instruction Disc (Spreading Health)','Nano Crystal (Spreading Health)');
@@ -648,9 +648,9 @@ INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_n
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147265,43934,83,83,'Instruction Disc (Thorough Examination)','Nano Crystal (Thorough Examination)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147266,99589,7,7,'Instruction Disc (Tired Limbs)','Nano Crystal (Tired Limbs)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147267,43935,113,113,'Instruction Disc (Tissue Repair)','Nano Crystal (Tissue Repair)');
-INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147268,99587,185,185,'Instruction Disc (Uncontrollable Body Tremors)','Nano Crystal (Uncontrollable Body Tremors)');
+INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name, comment) VALUES(147268,99587,185,185,'Instruction Disc (Uncontrollable Body Tremors)','Nano Crystal (Uncontrollable Body Tremors)', 'Used for building the Omni-Med Battle Pants');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147270,42423,4,4,'Instruction Disc (Weak Team Heal)','Nano Crystal (Weak Team Heal)');
-INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147271,28794,179,179,'Instruction Disc (Wrack and Ruin)','Nano Crystal (Wrack and Ruin)');
+INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name, comment) VALUES(147271,28794,179,179,'Instruction Disc (Wrack and Ruin)','Nano Crystal (Wrack and Ruin)', 'Used for building the Omni-Med Battle Boots');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147272,118110,140,140,'Instruction Disc (Absorb Punishment)','Nano Crystal (Absorb Punishment)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147273,100224,27,27,'Instruction Disc (Aggressive Instincts)','Nano Crystal (Aggressive Instincts)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(147274,55760,37,37,'Instruction Disc (Arctic Cloak)','Nano Crystal (Arctic Cloak)');
@@ -1968,7 +1968,7 @@ INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_n
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(204517,204426,77,77,'Instruction Disc (Vaccine of Ransacking)','NanoCrystal (Vaccine of Ransacking)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(204520,204428,119,119,'Instruction Disc (Vaccine of Deprivation)','NanoCrystal (Vaccine of Deprivation)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(204523,204430,164,164,'Instruction Disc (Vaccine of Plundering)','NanoCrystal (Vaccine of Plundering)');
-INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(204526,204432,197,197,'Instruction Disc (Vaccine of Divestiture)','NanoCrystal (Vaccine of Divestiture)');
+INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name, comment) VALUES(204526,204432,197,197,'Instruction Disc (Vaccine of Divestiture)','NanoCrystal (Vaccine of Divestiture)', 'Used for building the Omni-Med Battle Helmet');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(204529,204304,90,90,'Instruction Disc (Feelings of Mortality)','NanoCrystal (Feelings of Mortality)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(204532,204306,180,180,'Instruction Disc (One Foot in the Grave)','NanoCrystal (One Foot in the Grave)');
 INSERT INTO discs(disc_id, crystal_id, crystal_ql, disc_ql, disc_name, crystal_name) VALUES(205162,201522,80,80,'Instruction Disc (Enfraam''s Toolkit)','NanoCrystal (Enfraam''s Toolkit)');

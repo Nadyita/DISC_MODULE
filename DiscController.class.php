@@ -34,6 +34,12 @@ class DiscController {
 	public $chatBot;
 
 	/**
+	 * @var \Budabot\Core\Util $util
+	 * @Inject
+	 */
+	public $util;
+
+	/**
 	 * @var \Budabot\Core\Text $text
 	 * @Inject
 	 */
@@ -61,8 +67,9 @@ class DiscController {
 	 * @return \Budabot\Core\DBRow[] An array of database entries that matched
 	 */
 	public function getDiscsByName($discName) {
-		$sql = 'SELECT * FROM discs WHERE disc_name LIKE ?';
-		return $this->db->query($sql, "%${discName}%");
+		list($where, $params) = $this->util->generateQueryFromParams(explode(' ', $discName), 'disc_name');
+		$sql = 'SELECT * FROM discs WHERE ' . $where;
+		return $this->db->query($sql, $params);
 	}
 
 	/**
@@ -136,6 +143,9 @@ class DiscController {
 			$nanoDetails->nanoline_name,
 			$nanoDetails->location
 		);
+		if (strlen($disc->comment)) {
+			$msg .= " <red>" . $disc->comment . "!<end>";
+		}
 		$sendto->reply($msg);
 	}
 
