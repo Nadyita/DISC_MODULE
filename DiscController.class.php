@@ -139,7 +139,7 @@ class DiscController {
 			"%s will turn into %s (%s, %s, <highlight>%s<end>).",
 			$discLink,
 			$nanoLink,
-			$nanoDetails->profession,
+			implode(", ", explode(":", $nanoDetails->professions)),
 			$nanoDetails->nanoline_name,
 			$nanoDetails->location
 		);
@@ -157,13 +157,11 @@ class DiscController {
 	 */
 	public function getNanoDetails($disc) {
 		$sql = "SELECT ".
-					"n.location, ".
-					"n.profession, ".
-					"nl.name AS nanoline_name ".
+					"location, ".
+					"professions, ".
+					"strain AS nanoline_name ".
 				"FROM nanos n ".
-				"LEFT JOIN nanos_nanolines_ref nnr ON n.lowid = nnr.lowid ".
-				"LEFT JOIN nanolines nl ON nnr.nanolines_id = nl.id ".
-				"WHERE n.lowid = ?";
+				"WHERE crystal_id = ?";
 		return $this->db->queryRow($sql, $disc->crystal_id);
 	}
 
