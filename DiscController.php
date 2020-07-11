@@ -1,12 +1,9 @@
 <?php
 
-namespace Budabot\User\Modules;
-
-use DateTime;
-use DateTimeZone;
+namespace Budabot\User\Modules\DISC_MODULE;
 
 /**
- * @author Nadyita (RK5)
+ * @author Nadyita (RK5) <nadyita@hodorraid.org>
  *
  * @Instance
  *
